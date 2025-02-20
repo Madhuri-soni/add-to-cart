@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Myntra Bag</title>
+  </head>
+  <body>
+    <button
+      class="bag-button"
+      onclick="cartQuantity = cartQuantity + 1; 
+    document.querySelector('#cart-summary').
+    innerText = `Your bag has  ${cartQuantity}  items `;"
+    >
+      Add to bag
+    </button>
+    <button
+      class="wish-button"
+      onclick="cartQuantity = cartQuantity - 1;
+      document.querySelector('#cart-summary'). innerText = `Your bag has ${cartQuantity} items `;"
+    >
+      Move to Wishlist
+    </button>
+
+    <button
+      class="bag-button"
+      onclick="cartQuantity = cartQuantity + 2;
+      document.querySelector('#cart-summary'). innerText = `Your bag has ${cartQuantity} items `;"
+    >
+      Add 1+1 sale item
+    </button>
+    <h1 id="cart-summary"></h1>
+
+    <script>
+      let cartQuantity = 0;
+      document.querySelector(
+        "#cart-summary"
+      ).innerText = `Your bag has  ${cartQuantity}  items `;
+      // let welcomeMessage = "Hello Friends";
+      //console.log("Hello Friends");
+      //console.log(welcomeMessage);
+      //back tick defines string `` these are back ticks.
+      // i = i + 5; can be written as i += 5;
+    </script>
+  </body>
+</html>
